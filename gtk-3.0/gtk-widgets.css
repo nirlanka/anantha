@@ -1407,7 +1407,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 }
 
 .dynamic-notebook .notebook tab {
-    padding: 3px;
+    padding: 5px;
 
     border-radius: 0;
 
@@ -1674,7 +1674,7 @@ GtkComboBox.combobox-entry .button:last-child {
 ********/
 
 GtkTreeMenu .menuitem {
-    padding: 2px;
+    padding: 4px;
 }
 
 .context-menu {
@@ -1737,7 +1737,19 @@ GtkTreeMenu .menuitem {
 .menu .menuitem:hover,
 .popup .menuitem:active,
 .popup .menuitem:hover {
+    color: @selected_fg_color;
     background-color: alpha (@text_color, 0.15);
+    /*anantha*/
+    background-image: linear-gradient(
+      shade (@mac_menu_select_top, 1),
+      shade (@mac_menu_select_bottom, 1)
+    );
+}
+
+/*anantha*/
+.menu .menuitem,
+.popup .menuitem {
+    padding: 2px;
 }
 
 .menu .menuitem *:insensitive {
@@ -2608,6 +2620,7 @@ GtkListBox,
 .source-list,
 .source-list.view {
     background-color: shade (@bg_color, 0.92);
+    background-color: @mac_sidebar_bg; /*anantha*/
     color: shade (@titlebar_color, 0.50);
     -gtk-icon-style: regular;
 }
@@ -2646,7 +2659,22 @@ GtkDialog .sidebar GtkScrolledWindow {
 
 .sidebar .view:hover,
 .source-list.view:hover {
-    background-color: shade (@titlebar_color, 1.10);
+
+    background-image: linear-gradient(
+        to bottom,
+        @mac_sidebar_select_top,
+        @mac_sidebar_select_bottom
+    );
+    border-image: linear-gradient(to bottom,
+                                  shade (@mac_sidebar_select_border_bottom, 1.18),
+                                  shade (@mac_sidebar_select_border_bottom, 0.88)
+                                  ) 1 0 1 0;
+    transition: background-image 300ms ease-out;
+    color: @selected_fg_color;
+    
+    border-style: solid;
+    border-width: 1px 0;
+    icon-shadow: 0 1px 1px alpha (#000, 0.25);
 }
 
 .sidebar .view:selected,
@@ -2663,15 +2691,18 @@ GtkDialog .sidebar GtkScrolledWindow {
     border-width: 1px 0 1px 0;
 
     background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.11),
-                                  alpha (#000, 0.07)
-                                  );
-
+    
+    background-image: linear-gradient(
+        to bottom,
+        @mac_sidebar_select_top,
+        @mac_sidebar_select_bottom
+    );
     border-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.25),
-                                  alpha (#fff, 0.30)
-                                  ) 1 1 1 1;
+                                  shade (@mac_sidebar_select_border_bottom, 1.18),
+                                  shade (@mac_sidebar_select_border_bottom, 0.88)
+                                  ) 1 0 1 0;
+    transition: background-image 300ms ease-out;
+    color: @selected_fg_color;
 
     box-shadow: inset 0 1px 0 0 alpha (#000, 0.03),
                 inset 0 -1px 0 0 alpha (#000, 0.10);
@@ -2703,15 +2734,17 @@ GtkDialog .sidebar .view:hover:selected {
 .sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.04),
-                                  alpha (#000, 0.03)
-                                  );
-
+    background-image: linear-gradient(
+        to bottom,
+        #839cc6, 
+        #7f87b4
+    ); /*#74A0E9 #5568D6*/
     border-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.15),
-                                  alpha (#fff, 0.25)
-                                  ) 1 1 1 1;
+                                  shade (#7f87b4, 1.08),
+                                  shade (#7f87b4, 0.78)
+                                  ) 1 0 1 0;
+    transition: background-image 300ms ease-out;
+    color: alpha(@selected_fg_color, 0.8);
 }
 
 GtkDialog .sidebar .view:selected:backdrop,

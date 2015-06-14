@@ -576,6 +576,20 @@ GtkComboBox.combobox-entry .button:last-child {
     background-color: transparent;
 }
 
+/*anantha*/
+.menu .menuitem:active,
+.menu .menuitem:hover,
+.popup .menuitem:active,
+.popup .menuitem:hover {
+    color: @selected_fg_color;
+    background-color: alpha (@text_color, 0.15);
+    /*anantha*/
+    background-image: linear-gradient(
+      shade (@mac_menu_select_top, 1),
+      shade (@mac_menu_select_bottom, 1)
+    );
+}
+
 /***********
 * Toolbars *
 ***********/

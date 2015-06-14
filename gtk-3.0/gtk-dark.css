@@ -80,5 +80,13 @@
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
 
+/*anantha*/
+@define-color mac_menu_select_bottom #0e50ed;
+@define-color mac_menu_select_top #6888f9;
+/*@define-color mac_sidebar_select_bottom #5568D6;*/
+/*@define-color mac_sidebar_select_border_bottom #505dc6;*/
+/*@define-color mac_sidebar_select_top #74A0E9;*/
+/*@define-color mac_sidebar_bg #dcdfe8;*/
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-dark.css");
