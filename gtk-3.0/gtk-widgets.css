@@ -3109,7 +3109,8 @@ GcrCertificateWidget .frame {
  ******/
 
 .titlebar {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar2.png"),
+                        linear-gradient(to bottom,
                                   shade (@colorPrimary, 1.04),
                                   shade (@colorPrimary, 0.84)
                                   );
