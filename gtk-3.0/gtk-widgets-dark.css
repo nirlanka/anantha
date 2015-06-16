@@ -1280,7 +1280,7 @@ GtkInfoBar .button:hover:insensitive {
  **************/
 
 .header-bar {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar.png"), linear-gradient(to bottom,
                                   shade (@headerbar_color, 1.04),
                                   shade (@headerbar_color, 0.84)
                                   );
@@ -1295,7 +1295,7 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .header-bar:backdrop {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar.png"), linear-gradient(to bottom,
                               @headerbar_color,
                               shade (@headerbar_color, 0.90)
                               );
@@ -1411,7 +1411,7 @@ GtkDialog .header-bar .titlebutton GtkImage:backdrop {
 }
 
 .titlebar.default-decoration:backdrop {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar.png"), linear-gradient(to bottom,
                                   shade (@titlebar_color, 1.10),
                                   @titlebar_color
                                   );
@@ -1436,7 +1436,7 @@ GtkDialog .titlebar,
 GtkMessageDialog .titlebar,
 GtkDialog .titlebar.default-decoration,
 GtkMessageDialog .titlebar.default-decoration {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar.png"), linear-gradient(to bottom,
                                   shade (@bg_color, 1.2),
                                   @bg_color
                                   );
@@ -1471,6 +1471,23 @@ GtkDialog.window-frame:backdrop,
                 0 10px 20px alpha (#000, 0.19),
                 0 6px 6px alpha (#000, 0.23);
 }
+
+/*anantha*/
+
+/*.titlebar {
+    background-image: url("anantha/background-noise-toolbar.png"),
+                        linear-gradient(to bottom,
+                                  shade (@colorPrimary, 1.04),
+                                  shade (@colorPrimary, 0.84)
+                                  );
+}
+
+.titlebar:backdrop {
+    background-image: url("anantha/background-noise-toolbar.png"), linear-gradient(to bottom,
+                              shade (@colorPrimary, 1.08),
+                              shade (@colorPrimary, 0.98)
+                              );
+}*/
 
 @import url("granite-widgets-dark.css");
 @import url("apps.css");
