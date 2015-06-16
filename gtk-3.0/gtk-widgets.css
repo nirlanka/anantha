@@ -1343,7 +1343,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 }
 
 .dynamic-notebook .notebook.header {
-    background-image: linear-gradient(to bottom,
+    background-image: url("anantha/background-noise-toolbar2.png"),linear-gradient(to bottom,
                                   alpha (#000, 0.10),
                                   alpha (#000, 0.00) 3px
                                   ),
