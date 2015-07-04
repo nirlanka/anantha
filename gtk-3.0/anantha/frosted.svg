@@ -1,0 +1,7 @@
+<svg id="svg-image-blur">
+    <!-- <image x="10" y="10" id="svg-image" width="300" height="200" xlink:href="http://css-plus.com/examples/2012/03/gaussian-blur/i/fence.jpg" /> -->
+
+    <filter id="blur-effect-1">
+        <feGaussianBlur stdDeviation="20" />
+    </filter>
+</svg> 

@@ -265,3 +265,10 @@ SwitchboardCategoryView GtkIconView.view.cell:selected:focus {
 PantheonTerminalPantheonTerminalWindow.background {
    background-color: transparent;
 }
+
+/* nautilus hack */
+.nautilus-desktop.nautilus-canvas-item {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black; 
+}
+
